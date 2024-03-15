@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: var(--mobile-app-primary-font);
+    box-sizing: border-box;
+    list-style: none;
+    color: var(--mobile-app-text-1);
+}
+
+html {
+    font-size: 16px;
+}
+
+:root {
+
+    /* COLORS */
+    --mobile-app-bg-color-1: rgb(12, 12, 12);
+    --mobile-app-bg-color-2: #141420;
+    --mobile-app-heading-color: white;
+    --mobile-app-text-1: white;
+    --mobile-app-text-2: #636366;
+
+    /* FONTS */
+    --mobile-app-primary-font: "Roboto", sans-serif;
+
+    /* SPACINGS */
+    --mobile-app-margin-xs: 5px;
+    --mobile-app-margin-s: 10px;
+    --mobile-app-margin-m: 20px;
+    --mobile-app-margin-l: 40px;
+    --mobile-app-margin-xl: 80px;
+
+    --mobile-app-margin-percent-xs: 5%;
+    --mobile-app-margin-percent-s: 10%;
+    --mobile-app-margin-percent-m: 15%;
+    --mobile-app-margin-percent-l: 20%;
+    --mobile-app-margin-percent-xl: 25%;
+
+
+
+    --mobile-app-padding-xs: 5px;
+    --mobile-app-padding-s: 10px;
+    --mobile-app-padding-m: 20px;
+    --mobile-app-padding-l: 40px;
+    --mobile-app-padding-xl: 80px;
+
+    --mobile-app-padding-percent-xs: 5%;
+    --mobile-app-padding-percent-s: 10%;
+    --mobile-app-padding-percent-m: 15%;
+    --mobile-app-padding-percent-l: 20%;
+    --mobile-app-padding-percent-xl: 25%;
+
+
+
+    --mobile-app-gap-xs: 5px;
+    --mobile-app-gap-s: 10px;
+    --mobile-app-gap-m: 20px;
+    --mobile-app-gap-l: 40px;
+    --mobile-app-gap-xl: 80px;
+
+    --mobile-app-gap-percent-xs: 5%;
+    --mobile-app-gap-percent-s: 10%;
+    --mobile-app-gap-percent-m: 15%;
+    --mobile-app-gap-percent-l: 20%;
+    --mobile-app-gap-percent-xl: 25%;
+
+    /* FONT-SIZES */
+    --mobile-app-h1: 2rem;
+    --mobile-app-h2: 1.7rem;
+    --mobile-app-h3: 1.5rem;
+    --mobile-app-h4: 1rem;
+    --mobile-app-h5: 0.7rem;
+    --mobile-app-h6: 0.5rem;
+
+}
+
+body {
+    min-height: 100svh;
+    background-color: var(--mobile-app-bg-color-1);
+    padding-bottom: 100px;
+}
+
+header {
+    padding: var(--mobile-app-padding-m) var(--mobile-app-padding-percent-m);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* seleccionar todos los hijos directos de header */
+/* header > * {} */
+
+.info-mobile {
+    display: flex;
+    gap: var(--mobile-app-gap-s);
+}
+
+#add-status {
+    padding: var(--mobile-app-padding-m) var(--mobile-app-padding-percent-s);
+    display: flex;
+    flex-direction: column;
+    gap: var(--mobile-app-gap-m);
+    width: 100%;
+    margin: auto;
+    font-size: 1.3rem;
+}
+
+#add-status>h1 {
+    font-size: var(--mobile-app-h1);
+}
+
+#add-status>.img-wrp {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#add-status>.img-wrp>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* selector para seleccionar el PRIMER div de mi sección con el id #add-status */
+#add-status>div:first-of-type {
+    display: flex;
+    gap: var(--mobile-app-gap-s);
+    align-items: center;
+
+}
+
+#add-status>div:first-of-type>h3 {
+    color: var(--mobile-app-text-2);
+}
+
+#add-status>ol {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mobile-app-gap-s);
+}
+
+#sub-issues {
+    padding: var(--mobile-app-padding-m) var(--mobile-app-padding-percent-s);
+    margin-top: var(--mobile-app-margin-m);
+}
+
+#sub-issues>div:first-of-type {
+    display: flex;
+    gap: var(--mobile-app-gap-s);
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#sub-issues>div:first-of-type p {
+    color: var(--mobile-app-text-2);
+}
+
+#sub-issues {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mobile-app-gap-m);
+}
+
+.sub-issues-element {
+    background-color: var(--mobile-app-bg-color-2);
+    border-radius: 15px;
+    width: 100%;
+    padding: var(--mobile-app-padding-m);
+    border: none;
+    margin-top: var(--mobile-app-margin-s);
+    position: relative;
+}
+
+button.sub-issues-element {
+    font-size: 1.4rem;
+    color: var(--mobile-app-text-1);
+    cursor: pointer;
+}
+
+article.sub-issues-element > img {
+    border-radius: 100%;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+
+article.sub-issues-element p {
+    color: var(--mobile-app-text-2);
+}
+
+article.sub-issues-element > div > div {
+    display: flex;
+    align-items: center;
+    gap: var(--mobile-app-gap-s);
+    color: var(--mobile-app-text-2);
+}
+
+article.sub-issues-element h4 {
+    color: var(--mobile-app-text-2);
+}
+
+article.sub-issues-element > h3 {
+    padding-left: var(--mobile-app-padding-l);
+    margin-top: var(--mobile-app-margin-m);
+}
+
+article.sub-issues-element > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: var(--mobile-app-padding-l);
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+@media (width >=750px) {
+    #add-status>h1 {
+        font-size: 3rem;
+    }
+
+    #add-status>.img-wrp {
+        height: 300px;
+    }
+
+    #add-status {
+        width: 70%;
+    }
+}
+
+@media (width >=1100px) {
+    #add-status>h1 {
+        font-size: 4rem;
+    }
+
+    #add-status {
+        font-size: 1.6rem;
+    }
+}
